@@ -1,7 +1,7 @@
 AC_INIT(AUTHORS)
 AM_INIT_AUTOMAKE(oregano, 0.81)
 
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_HEADERS(config.h)
 AM_MAINTAINER_MODE
 
 AC_CONFIG_MACRO_DIR([m4])
@@ -38,7 +38,7 @@ dnl ###########################################################################
 AC_SUBST(SCROLLKEEPER_REQUIRED)
 AC_PATH_PROG(SCROLLKEEPER_CONFIG, scrollkeeper-config,no)
 if test x$SCROLLKEEPER_CONFIG = xno; then
-	AC_MSG_ERROR(Couldn't find scrollkeeper-config, please install the scrollkeeper package)
+	AC_MSG_ERROR("Couldn't find scrollkeeper-config, please install the scrollkeeper package")
 fi
 
 
